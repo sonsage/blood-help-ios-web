@@ -2,7 +2,8 @@ const bloodBaseUrl = "https://www.blood.org.tw/xcevent";
 
 module.exports = async function handler(request, response) {
   try {
-    const page = request.query.page;
+    const requestUrl = new URL(request.url || "/api/xcevent", "https://blood-help-ios-web.vercel.app");
+    const page = request.query?.page || requestUrl.searchParams.get("page");
     const targetUrl = new URL(bloodBaseUrl);
     if (page) targetUrl.searchParams.set("page", String(page));
 
