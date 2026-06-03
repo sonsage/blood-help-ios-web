@@ -420,8 +420,6 @@ async function fetchWithCorsFallback(url) {
 }
 
 function localProxyUrl(url) {
-  const localHosts = new Set(["localhost", "127.0.0.1"]);
-  if (!localHosts.has(window.location.hostname)) return "";
   const source = new URL(url);
   if (source.origin !== "https://www.blood.org.tw" || source.pathname !== "/xcevent") return "";
   return `/api/xcevent${source.search}`;

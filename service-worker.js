@@ -1,4 +1,4 @@
-const CACHE_NAME = "blood-assistant-ios-v7";
+const CACHE_NAME = "blood-assistant-ios-v8";
 const APP_FILES = [
   "./",
   "./index.html",
