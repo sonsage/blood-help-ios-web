@@ -35,7 +35,7 @@ const server = http.createServer(async (request, response) => {
 
 server.on("error", (error) => {
   if (error.code === "EADDRINUSE") {
-    console.error(`Port ${port} is already in use. Close the other server or run: $env:PORT=4174; node server.js`);
+    console.error(`Port ${port} is already in use. Close the other server or run: $env:PORT=4174; node dev-server.js`);
     process.exit(1);
   }
   console.error(error);
