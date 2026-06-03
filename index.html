@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#d9232e">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="捐血人智慧助理">
+  <title>捐血人智慧助理</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <header class="top-bar">
+      <div class="brand-mark" aria-hidden="true">♥</div>
+      <h1>捐血人智慧助理</h1>
+    </header>
+
+    <main id="view" class="view" tabindex="-1"></main>
+
+    <nav class="bottom-nav" aria-label="主要導覽">
+      <button class="nav-item is-active" data-tab="home" type="button">
+        <span aria-hidden="true">⌂</span>
+        <span>首頁</span>
+      </button>
+      <button class="nav-item" data-tab="reminder" type="button">
+        <span aria-hidden="true">◴</span>
+        <span>提醒</span>
+      </button>
+      <button class="nav-item" data-tab="settings" type="button">
+        <span aria-hidden="true">⚙</span>
+        <span>設定</span>
+      </button>
+    </nav>
+  </div>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <script src="app.js?v=20260603-7" defer></script>
+</body>
+</html>
