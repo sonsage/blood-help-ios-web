@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "start": "node dev-server.js",
     "check": "node --check app.js && node --check dev-server.js && node --check api/xcevent.js"
   }
 }
