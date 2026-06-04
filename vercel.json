@@ -28,6 +28,18 @@
     {
       "src": "icon.svg",
       "use": "@vercel/static"
+    },
+    {
+      "src": "robots.txt",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "sitemap.xml",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "googlee75dee753962767f.html",
+      "use": "@vercel/static"
     }
   ],
   "routes": [
@@ -40,7 +52,7 @@
       "dest": "/api/xcevent.js?$1"
     },
     {
-      "src": "/(app\\.js|styles\\.css|manifest\\.webmanifest|service-worker\\.js|icon\\.svg)",
+      "src": "/(app\\.js|styles\\.css|manifest\\.webmanifest|service-worker\\.js|icon\\.svg|robots\\.txt|sitemap\\.xml|googlee75dee753962767f\\.html)",
       "dest": "/$1"
     },
     {
