@@ -3,7 +3,7 @@ const DEVELOPER_WEBSITE_URL = "https://www.oirgc.com.tw/";
 const OFFICIAL_FALLBACK = "請以官方公告為準";
 const ADDRESS_FALLBACK = "地址不足，請以官方公告為準";
 const OFFICIAL_NOTICE = "本 APP 為非官方公益工具，捐血地點、時間、等候人數等資訊，來源為台灣血液基金會公開頁面。實際服務時間、地點與現場狀況，請以官方公告及現場人員說明為準。";
-const WEBSITE_NOTICE = "官方網站內容與本 APP 公益功能無關，不影響本 APP 使用。";
+const WEBSITE_NOTICE = "本工具由正衡調查與風險控管顧問有限公司協助開發與維護，僅供公益查詢使用。";
 const PRIVACY_NOTICE = [
   "本 APP 不需要註冊或登入。",
   "本 APP 不讀取捐血人專區資料。",
@@ -281,7 +281,7 @@ function reminderEntryCard() {
 function websiteFooter() {
   return `
     <div class="footer-link">
-      <a href="${DEVELOPER_WEBSITE_URL}" target="_blank" rel="noopener">正衡官方網站</a>
+      <span class="strong-red">開發與維護</span>
       <span class="muted">${escapeHtml(WEBSITE_NOTICE)}</span>
     </div>
   `;
@@ -336,9 +336,9 @@ function renderAbout() {
       ${sectionTitle("ℹ", "關於本 APP")}
       <div class="card card-pad"><p class="muted">${escapeHtml(OFFICIAL_NOTICE)}</p></div>
       <div class="card card-pad stack">
-        <h2 class="location-name strong-red">開發者資訊</h2>
-        <p class="muted">本 APP 由正衡調查與風險控管顧問有限公司製作。若需了解其他工具與服務，可前往正衡官方網站查看。</p>
-        <a class="button full" style="display:grid;place-items:center;text-decoration:none" href="${DEVELOPER_WEBSITE_URL}" target="_blank" rel="noopener">開啟正衡官方網站</a>
+        <h2 class="location-name strong-red">開發與維護</h2>
+        <p class="muted">本 APP 由正衡調查與風險控管顧問有限公司協助開發與維護，僅作為公益查詢工具。捐血地點、時間與等候人數請以台灣血液基金會官方公告為準。</p>
+        <a class="button full" style="display:grid;place-items:center;text-decoration:none" href="${DEVELOPER_WEBSITE_URL}" target="_blank" rel="noopener">前往正衡官方網站</a>
       </div>
     </section>
   `;
