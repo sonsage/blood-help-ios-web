@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://blood-help-ios-web.vercel.app/sitemap.xml
