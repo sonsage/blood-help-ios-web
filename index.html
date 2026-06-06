@@ -6,7 +6,9 @@
   <title>捐血人智慧助理｜今日捐血地點與等候人數查詢</title>
   <meta name="description" content="查詢台灣今日捐血地點、作業時間、等候人數，並可設定下次捐血提醒。資料來源為台灣血液基金會公開資訊，實際狀況請以官方公告為準。">
   <meta name="robots" content="index, follow">
+  <meta name="googlebot" content="index, follow">
   <link rel="canonical" href="https://blood-help-ios-web.vercel.app/">
+  <link rel="sitemap" type="application/xml" href="https://blood-help-ios-web.vercel.app/sitemap.xml">
   <meta name="theme-color" content="#d9232e">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="mobile-web-app-capable" content="yes">
@@ -24,6 +26,23 @@
   <meta name="twitter:description" content="查詢台灣今日捐血地點、作業時間、等候人數，並可設定下次捐血提醒。">
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="stylesheet" href="styles.css">
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "捐血人智慧助理",
+      "url": "https://blood-help-ios-web.vercel.app/",
+      "applicationCategory": "HealthApplication",
+      "operatingSystem": "iOS, Android, Web",
+      "inLanguage": "zh-Hant-TW",
+      "description": "查詢台灣今日捐血地點、作業時間、等候人數，並可設定下次捐血提醒。資料來源為台灣血液基金會公開資訊，實際狀況請以官方公告為準。",
+      "isAccessibleForFree": true,
+      "sameAs": [
+        "https://www.blood.org.tw/xcevent",
+        "https://www.oirgc.com.tw/"
+      ]
+    }
+  </script>
 </head>
 <body>
   <div class="app-shell">
@@ -32,7 +51,21 @@
       <h1>捐血人智慧助理</h1>
     </header>
 
-    <main id="view" class="view" tabindex="-1"></main>
+    <main id="view" class="view" tabindex="-1">
+      <section class="stack">
+        <h2 class="section-title"><span class="icon" aria-hidden="true">⌖</span><span>今日全台捐血地點查詢</span></h2>
+        <div class="card card-pad">
+          <p class="muted">捐血人智慧助理提供台灣今日捐血地點、作業時間、等候人數與下次捐血提醒功能。資料來源為台灣血液基金會公開資訊，實際服務時間、地點與現場狀況請以官方公告及現場人員說明為準。</p>
+          <p class="muted">本工具不需要註冊或登入，不讀取捐血人專區資料，也不蒐集姓名、身分證字號、電話、生日或捐血紀錄等個資。</p>
+          <p class="muted">
+            相關連結：
+            <a href="https://www.blood.org.tw/xcevent" target="_blank" rel="noopener">台灣血液基金會公開捐血活動頁面</a>、
+            <a href="https://www.oirgc.com.tw/" target="_blank" rel="noopener">開發與維護單位</a>、
+            <a href="/sitemap.xml">網站地圖</a>
+          </p>
+        </div>
+      </section>
+    </main>
 
     <nav class="bottom-nav" aria-label="主要導覽">
       <button class="nav-item is-active" data-tab="home" type="button">
@@ -52,6 +85,16 @@
 
   <div id="toast" class="toast" role="status" aria-live="polite"></div>
 
+
+  <noscript>
+    <section class="view stack">
+      <h2 class="section-title"><span class="icon" aria-hidden="true">⌖</span><span>JavaScript 未啟用</span></h2>
+      <div class="card card-pad">
+        <p class="muted">捐血人智慧助理需要 JavaScript 才能即時載入今日捐血地點、作業時間與等候人數。若無法使用互動功能，請前往台灣血液基金會公開捐血活動頁面查詢最新資訊。</p>
+        <p class="muted"><a href="https://www.blood.org.tw/xcevent" target="_blank" rel="noopener">前往台灣血液基金會公開捐血活動頁面</a></p>
+      </div>
+    </section>
+  </noscript>
   <script src="app.js?v=20260604-2" defer></script>
 </body>
 </html>
